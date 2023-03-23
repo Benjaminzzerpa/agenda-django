@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-8fl1)+i)$+utyb7y!(iufaw^4(za8+^1ncb$$9h73#0afcuubm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -122,6 +122,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'templates/static')
 ]
+STATIC_ROOT = os.path.join('static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = 'media/'
 
@@ -130,7 +131,7 @@ MEDIA_URL = 'media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#Mensagens
+# Mensagens
 
 MESSAGE_TAGS = {
     constants.ERROR: 'alert-danger',
